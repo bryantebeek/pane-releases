@@ -2,20 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Pane — terminal workspaces for SSH</title>
+  <title>Pane — remote dev environments on macOS & iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A native macOS and iOS app for managing remote development environments over SSH. Ghostty-powered terminals, split panes, services, and seamless cross-device sync.">
+  <link rel="icon" href="icon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
+    <img src="icon.png" alt="Pane icon" class="icon" width="96" height="96">
     <h1>Pane</h1>
-    <p>Terminal workspaces for SSH. macOS only, for now.</p>
+    <p class="tagline">Remote dev environments on macOS & iOS</p>
+    <p>
+      Connect to your servers over SSH. Organize projects into workspaces.
+      Split terminals, run services, browse files, view diffs &mdash; all from
+      a single native app. Start on your Mac, pick up on your iPhone.
+    </p>
     <p>
       <a class="download" href="https://github.com/bryantebeek/pane-releases/releases/latest">
-        Download latest
+        Download for macOS
       </a>
     </p>
-    <p class="small">Requires macOS 26 or later. Updates automatically via Sparkle.</p>
+    <p class="small">Requires macOS 15 or later. Updates automatically via Sparkle.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h3>Ghostty Terminal</h3>
+        <p>GPU-accelerated terminal rendering with Metal. Full xterm-256color, split panes, and tmux-backed sessions that persist across restarts.</p>
+      </div>
+      <div class="feature">
+        <h3>Project Workspaces</h3>
+        <p>Organize servers into projects and workspaces. Branch workspaces create git worktrees. Layout syncs across every connected device.</p>
+      </div>
+      <div class="feature">
+        <h3>Services</h3>
+        <p>Declare dev servers and workers in pane.json. Start, stop, and health-check them from the sidebar. Open service URLs in a built-in browser routed through the server.</p>
+      </div>
+      <div class="feature">
+        <h3>AI Agents</h3>
+        <p>Launch Claude Code or any CLI agent in a dedicated tab. Get attention pulses when agents need input. Auto-generated tab titles from conversation context.</p>
+      </div>
+      <div class="feature">
+        <h3>Remote Browser</h3>
+        <p>Browse localhost and internal URLs on remote servers. All traffic routes through a SOCKS proxy on the host &mdash; no port forwarding needed.</p>
+      </div>
+      <div class="feature">
+        <h3>iOS</h3>
+        <p>Full terminal on your iPhone with the same Ghostty engine and tmux sessions. Speech input, file browser, and seamless handoff between devices.</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>

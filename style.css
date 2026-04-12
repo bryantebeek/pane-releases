@@ -1,4 +1,53 @@
-body { font: 16px/1.5 -apple-system, system-ui, sans-serif; max-width: 36rem; margin: 4rem auto; padding: 0 1rem; color: #1a1a1a; }
-h1 { font-size: 3rem; margin: 0 0 0.5rem; }
-.download { display: inline-block; padding: 0.6rem 1.2rem; background: #1a1a1a; color: #fff; border-radius: 0.4rem; text-decoration: none; }
-.small { color: #666; font-size: 0.85rem; }
+body {
+  font: 16px/1.6 -apple-system, system-ui, sans-serif;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.icon { display: block; margin: 0 auto 1rem; border-radius: 22%; }
+
+h1 { font-size: 2.5rem; margin: 0; text-align: center; }
+
+.tagline {
+  text-align: center;
+  color: #555;
+  font-size: 1.15rem;
+  margin: 0.25rem 0 1.5rem;
+}
+
+main > p { text-align: center; }
+
+.download {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.download:hover { background: #333; }
+
+.small { color: #888; font-size: 0.85rem; }
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.feature h3 { font-size: 1rem; margin: 0 0 0.3rem; }
+.feature p { margin: 0; color: #555; font-size: 0.9rem; line-height: 1.5; }
+
+@media (max-width: 600px) {
+  .features { grid-template-columns: 1fr; }
+  h1 { font-size: 2rem; }
+}
