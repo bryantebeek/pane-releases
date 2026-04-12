@@ -8,69 +8,86 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="breadcrumb"><a href="../">Pane</a> / Keyboard Shortcuts</nav>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <a href="../" class="sidebar-brand">
+        <img src="../icon.png" width="28" height="28" alt="Pane">
+        <span>Pane</span>
+      </a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-label">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h12M3 13h12" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </label>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Documentation</div>
+        <a href="getting-started.html" class="sidebar-link">Getting Started</a>
+        <a href="configuration.html" class="sidebar-link">Configuration</a>
+        <a href="keyboard-shortcuts.html" class="sidebar-link active">Keyboard Shortcuts</a>
+      </div>
+      <div class="sidebar-footer">
+        <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Download</a>
+        <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+      </div>
+    </aside>
 
-  <h1>Keyboard Shortcuts</h1>
-  <p class="subtitle">macOS keyboard shortcuts reference.</p>
+    <article class="content">
+      <h1>Keyboard Shortcuts</h1>
+      <p class="subtitle">macOS keyboard shortcuts reference.</p>
 
-  <h2>Tabs</h2>
-  <table>
-    <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-    <tbody>
-      <tr><td><kbd>⌘</kbd><kbd>T</kbd></td><td>New agent tab in the active pane</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>W</kbd></td><td>Close tab (soft close &mdash; tmux session stays alive on the server)</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>[</kbd></td><td>Previous tab</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>]</kbd></td><td>Next tab</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>R</kbd></td><td>Rename tab</td></tr>
-    </tbody>
-  </table>
+      <h2>Tabs</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘</kbd><kbd>T</kbd></td><td>New agent tab in the active pane</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>W</kbd></td><td>Close tab (soft close &mdash; tmux session stays alive on the server)</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>[</kbd></td><td>Previous tab</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>]</kbd></td><td>Next tab</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>R</kbd></td><td>Rename tab</td></tr>
+        </tbody>
+      </table>
 
-  <h2>Panes</h2>
-  <table>
-    <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-    <tbody>
-      <tr><td><kbd>⌘</kbd><kbd>D</kbd></td><td>Split horizontally (left / right)</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>D</kbd></td><td>Split vertically (top / bottom)</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>←</kbd></td><td>Focus pane left</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>→</kbd></td><td>Focus pane right</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↑</kbd></td><td>Focus pane up</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↓</kbd></td><td>Focus pane down</td></tr>
-    </tbody>
-  </table>
+      <h2>Panes</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘</kbd><kbd>D</kbd></td><td>Split horizontally (left / right)</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>D</kbd></td><td>Split vertically (top / bottom)</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>←</kbd></td><td>Focus pane left</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>→</kbd></td><td>Focus pane right</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↑</kbd></td><td>Focus pane up</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↓</kbd></td><td>Focus pane down</td></tr>
+        </tbody>
+      </table>
 
-  <h2>Palettes</h2>
-  <table>
-    <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-    <tbody>
-      <tr><td><kbd>⌘</kbd><kbd>P</kbd></td><td>File palette &mdash; fuzzy search files and switch tabs</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>P</kbd></td><td>Command palette &mdash; search and run commands</td></tr>
-    </tbody>
-  </table>
-  <div class="note">
-    Typing <code>&gt;</code> at the start of the file palette query switches to command mode (and vice versa).
+      <h2>Palettes</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘</kbd><kbd>P</kbd></td><td>File palette &mdash; fuzzy search files and switch tabs</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>⇧</kbd><kbd>P</kbd></td><td>Command palette &mdash; search and run commands</td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        Typing <code>&gt;</code> at the start of the file palette query switches to command mode (and vice versa).
+      </div>
+
+      <h2>Terminal</h2>
+      <table>
+        <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘</kbd><kbd>V</kbd></td><td>Paste text (preserves bracketed-paste mode)</td></tr>
+          <tr><td><kbd>⌘</kbd><kbd>V</kbd></td><td>Paste image (when clipboard holds an image) &mdash; uploads to the server and injects the path</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Notes</h2>
+      <ul>
+        <li>Tab and pane shortcuts require an active workspace.</li>
+        <li>Closing a tab with <kbd>⌘</kbd><kbd>W</kbd> is non-destructive &mdash; the tmux session keeps running on the server. To destroy a session, use <strong>Kill Session</strong> from the sidebar context menu.</li>
+        <li>Pane focus navigation is geometric &mdash; it picks the pane whose center is nearest in the given direction.</li>
+        <li>Closing the last tab in a pane auto-collapses it (when the workspace has other panes).</li>
+      </ul>
+    </article>
   </div>
-
-  <h2>Terminal</h2>
-  <table>
-    <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-    <tbody>
-      <tr><td><kbd>⌘</kbd><kbd>V</kbd></td><td>Paste text (preserves bracketed-paste mode)</td></tr>
-      <tr><td><kbd>⌘</kbd><kbd>V</kbd></td><td>Paste image (when clipboard holds an image) &mdash; uploads to the server and injects the path</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Notes</h2>
-  <ul>
-    <li>Tab and pane shortcuts require an active workspace.</li>
-    <li>Closing a tab with <kbd>⌘</kbd><kbd>W</kbd> is non-destructive &mdash; the tmux session keeps running on the server. To destroy a session, use <strong>Kill Session</strong> from the sidebar context menu.</li>
-    <li>Pane focus navigation is geometric &mdash; it picks the pane whose center is nearest in the given direction.</li>
-    <li>Closing the last tab in a pane auto-collapses it (when the workspace has other panes).</li>
-  </ul>
-
-  <h2>Next steps</h2>
-  <ul>
-    <li><a href="getting-started.html">Getting started guide</a></li>
-    <li><a href="configuration.html">Project configuration</a></li>
-  </ul>
 </body>
 </html>

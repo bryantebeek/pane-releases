@@ -8,24 +8,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="breadcrumb"><a href="../">Pane</a> / Configuration</nav>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <a href="../" class="sidebar-brand">
+        <img src="../icon.png" width="28" height="28" alt="Pane">
+        <span>Pane</span>
+      </a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-label">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h12M3 13h12" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </label>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Documentation</div>
+        <a href="getting-started.html" class="sidebar-link">Getting Started</a>
+        <a href="configuration.html" class="sidebar-link active">Configuration</a>
+        <a href="keyboard-shortcuts.html" class="sidebar-link">Keyboard Shortcuts</a>
+      </div>
+      <div class="sidebar-footer">
+        <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Download</a>
+        <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+      </div>
+    </aside>
 
-  <h1>Configuration</h1>
-  <p class="subtitle">Project settings via <code>pane.json</code>.</p>
+    <article class="content">
+      <h1>Configuration</h1>
+      <p class="subtitle">Project settings via <code>pane.json</code>.</p>
 
-  <h2>Overview</h2>
-  <p>
-    Drop a <code>pane.json</code> file in the root of your project directory to configure
-    the project name and declare services. The file is optional &mdash; without it, the project
-    name falls back to the directory basename.
-  </p>
-  <p>
-    Pane reads the file every time a workspace opens and when you click <strong>Reload</strong>
-    in the Services panel, so edits are picked up without restarting the app.
-  </p>
+      <h2>Overview</h2>
+      <p>
+        Drop a <code>pane.json</code> file in the root of your project directory to configure
+        the project name and declare services. The file is optional &mdash; without it, the project
+        name falls back to the directory basename.
+      </p>
+      <p>
+        Pane reads the file every time a workspace opens and when you click <strong>Reload</strong>
+        in the Services panel, so edits are picked up without restarting the app.
+      </p>
 
-  <h2>Full example</h2>
-  <pre><code>{
+      <h2>Full example</h2>
+      <pre><code>{
   <span class="key">"name"</span>: <span class="string">"My Project"</span>,
   <span class="key">"scripts"</span>: {
     <span class="key">"setup"</span>: <span class="string">"scripts/setup.sh"</span>,
@@ -52,84 +73,80 @@
   ]
 }</code></pre>
 
-  <h2>Fields</h2>
+      <h2>Fields</h2>
 
-  <h3><code>name</code></h3>
-  <p>
-    Display name shown in the sidebar and dashboard. Falls back to the directory basename
-    when <code>pane.json</code> is missing or the field is omitted.
-  </p>
+      <h3><code>name</code></h3>
+      <p>
+        Display name shown in the sidebar and dashboard. Falls back to the directory basename
+        when <code>pane.json</code> is missing or the field is omitted.
+      </p>
 
-  <h3><code>scripts</code></h3>
-  <p>Optional lifecycle scripts associated with the project.</p>
-  <table class="field-table">
-    <tr><td><code>setup</code></td><td>Shell command for initial project setup.</td></tr>
-    <tr><td><code>archive</code></td><td>Shell command for archiving / cleanup.</td></tr>
-  </table>
+      <h3><code>scripts</code></h3>
+      <p>Optional lifecycle scripts associated with the project.</p>
+      <table class="field-table">
+        <tr><td><code>setup</code></td><td>Shell command for initial project setup.</td></tr>
+        <tr><td><code>archive</code></td><td>Shell command for archiving / cleanup.</td></tr>
+      </table>
 
-  <h3><code>services</code></h3>
-  <p>
-    An array of long-running processes that Pane manages as detached tmux sessions.
-    Each service appears in the Services panel with start/stop controls and live health indicators.
-  </p>
+      <h3><code>services</code></h3>
+      <p>
+        An array of long-running processes that Pane manages as detached tmux sessions.
+        Each service appears in the Services panel with start/stop controls and live health indicators.
+      </p>
 
-  <table class="field-table">
-    <thead>
-      <tr><th>Field</th><th>Required</th><th>Description</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>name</code></td>
-        <td>Yes</td>
-        <td>Unique display name. Also used as the tmux session suffix.</td>
-      </tr>
-      <tr>
-        <td><code>command</code></td>
-        <td>Yes</td>
-        <td>Shell command to run. Multi-word commands are wrapped in <code>sh -c</code>.</td>
-      </tr>
-      <tr>
-        <td><code>cwd</code></td>
-        <td>No</td>
-        <td>Working directory. Relative paths resolve against the workspace root (so git worktrees each get their own copy). Defaults to the workspace root.</td>
-      </tr>
-      <tr>
-        <td><code>url</code></td>
-        <td>No</td>
-        <td>Health-check URL. HTTP/HTTPS URLs also add a clickable browser button. <code>tcp://host:port</code> URLs are checked via port probe only.</td>
-      </tr>
-    </tbody>
-  </table>
+      <table class="field-table">
+        <thead>
+          <tr><th>Field</th><th>Required</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>name</code></td>
+            <td>Yes</td>
+            <td>Unique display name. Also used as the tmux session suffix.</td>
+          </tr>
+          <tr>
+            <td><code>command</code></td>
+            <td>Yes</td>
+            <td>Shell command to run. Multi-word commands are wrapped in <code>sh -c</code>.</td>
+          </tr>
+          <tr>
+            <td><code>cwd</code></td>
+            <td>No</td>
+            <td>Working directory. Relative paths resolve against the workspace root (so git worktrees each get their own copy). Defaults to the workspace root.</td>
+          </tr>
+          <tr>
+            <td><code>url</code></td>
+            <td>No</td>
+            <td>Health-check URL. HTTP/HTTPS URLs also add a clickable browser button. <code>tcp://host:port</code> URLs are checked via port probe only.</td>
+          </tr>
+        </tbody>
+      </table>
 
-  <h2>Service health checks</h2>
-  <p>Health is determined by the combination of tmux session state and URL probing:</p>
-  <table>
-    <thead>
-      <tr><th>Status</th><th>Indicator</th><th>Condition</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Stopped</td><td>Gray dot</td><td>tmux session does not exist</td></tr>
-      <tr><td>Starting</td><td>Yellow dot</td><td>tmux session exists, but URL probe fails</td></tr>
-      <tr><td>Running</td><td>Green dot</td><td>tmux session exists and URL probe succeeds (or no URL defined)</td></tr>
-    </tbody>
-  </table>
-  <p>
-    Health checks run on the server, not your laptop &mdash; so <code>localhost:3000</code> checks
-    the server's port 3000, not yours.
-  </p>
+      <h2>Service health checks</h2>
+      <p>Health is determined by the combination of tmux session state and URL probing:</p>
+      <table>
+        <thead>
+          <tr><th>Status</th><th>Indicator</th><th>Condition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stopped</td><td>Gray dot</td><td>tmux session does not exist</td></tr>
+          <tr><td>Starting</td><td>Yellow dot</td><td>tmux session exists, but URL probe fails</td></tr>
+          <tr><td>Running</td><td>Green dot</td><td>tmux session exists and URL probe succeeds (or no URL defined)</td></tr>
+        </tbody>
+      </table>
+      <p>
+        Health checks run on the server, not your laptop &mdash; so <code>localhost:3000</code> checks
+        the server's port 3000, not yours.
+      </p>
 
-  <h2>Service URLs and the browser</h2>
-  <p>
-    When a service defines an HTTP or HTTPS <code>url</code>, clicking the globe icon in the
-    Services panel opens it in a browser tab routed through the server. DNS resolution and TCP
-    connections happen on the remote host, so internal hostnames and <code>localhost</code> ports
-    work without any port forwarding setup.
-  </p>
-
-  <h2>Next steps</h2>
-  <ul>
-    <li><a href="getting-started.html">Getting started guide</a></li>
-    <li><a href="keyboard-shortcuts.html">Keyboard shortcuts</a></li>
-  </ul>
+      <h2>Service URLs and the browser</h2>
+      <p>
+        When a service defines an HTTP or HTTPS <code>url</code>, clicking the globe icon in the
+        Services panel opens it in a browser tab routed through the server. DNS resolution and TCP
+        connections happen on the remote host, so internal hostnames and <code>localhost</code> ports
+        work without any port forwarding setup.
+      </p>
+    </article>
+  </div>
 </body>
 </html>

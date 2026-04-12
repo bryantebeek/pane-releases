@@ -8,85 +8,102 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="breadcrumb"><a href="../">Pane</a> / Getting Started</nav>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <a href="../" class="sidebar-brand">
+        <img src="../icon.png" width="28" height="28" alt="Pane">
+        <span>Pane</span>
+      </a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-label">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h12M3 13h12" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </label>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Documentation</div>
+        <a href="getting-started.html" class="sidebar-link active">Getting Started</a>
+        <a href="configuration.html" class="sidebar-link">Configuration</a>
+        <a href="keyboard-shortcuts.html" class="sidebar-link">Keyboard Shortcuts</a>
+      </div>
+      <div class="sidebar-footer">
+        <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Download</a>
+        <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+      </div>
+    </aside>
 
-  <h1>Getting Started</h1>
-  <p class="subtitle">Install Pane, connect to a server, and open your first terminal.</p>
+    <article class="content">
+      <h1>Getting Started</h1>
+      <p class="subtitle">Install Pane, connect to a server, and open your first terminal.</p>
 
-  <h2>Prerequisites</h2>
-  <ul>
-    <li>macOS 15 or later</li>
-    <li>An SSH server with <code>tmux</code> installed</li>
-  </ul>
-
-  <h2>Install</h2>
-  <p>
-    Download the latest release from the
-    <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Releases page</a>,
-    unzip, and drag <strong>Pane.app</strong> to <code>/Applications</code>.
-    Pane updates automatically via Sparkle &mdash; you'll get a notification when a new version is available.
-  </p>
-
-  <h2>Add a server</h2>
-  <ol>
-    <li>Open Pane. The sidebar shows a <strong>Local</strong> server (your Mac) by default.</li>
-    <li>Click the <strong>+</strong> button in the sidebar footer and choose <strong>Add Server</strong>.</li>
-    <li>Fill in the connection details:
+      <h2>Prerequisites</h2>
       <ul>
-        <li><strong>Host</strong> &mdash; hostname or IP address</li>
-        <li><strong>Port</strong> &mdash; defaults to 22</li>
-        <li><strong>Username</strong></li>
-        <li><strong>Authentication</strong> &mdash; password or an imported SSH key (RSA, Ed25519, ECDSA)</li>
+        <li>macOS 15 or later</li>
+        <li>An SSH server with <code>tmux</code> installed</li>
       </ul>
-    </li>
-    <li>Click <strong>Save</strong>. Pane validates the connection in real time &mdash; if the host key is new, you'll see a TOFU confirmation dialog. On success, the server appears in the sidebar.</li>
-  </ol>
 
-  <h2>Add a project</h2>
-  <p>A project is just a directory on a server.</p>
-  <ol>
-    <li>Select a server in the sidebar.</li>
-    <li>Click the <strong>+</strong> button and choose <strong>Add Project</strong>.</li>
-    <li>Browse to an existing directory, or create a new one.</li>
-    <li>The project appears in the sidebar tree. If the directory contains a <a href="configuration.html"><code>pane.json</code></a>, the project name and services are picked up automatically.</li>
-  </ol>
+      <h2>Install</h2>
+      <p>
+        Download the latest release from the
+        <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Releases page</a>,
+        unzip, and drag <strong>Pane.app</strong> to <code>/Applications</code>.
+        Pane updates automatically via Sparkle &mdash; you'll get a notification when a new version is available.
+      </p>
 
-  <h2>Open a terminal</h2>
-  <p>
-    Click a workspace under a project to open it. You'll see an empty pane with action buttons.
-    Press <kbd>⌘</kbd><kbd>T</kbd> to create a new agent tab (launches Claude Code), or click
-    the terminal icon in the tab bar for a plain terminal. Each tab is backed by its own tmux session
-    on the server.
-  </p>
+      <h2>Add a server</h2>
+      <ol>
+        <li>Open Pane. The sidebar shows a <strong>Local</strong> server (your Mac) by default.</li>
+        <li>Click the <strong>+</strong> button in the sidebar footer and choose <strong>Add Server</strong>.</li>
+        <li>Fill in the connection details:
+          <ul>
+            <li><strong>Host</strong> &mdash; hostname or IP address</li>
+            <li><strong>Port</strong> &mdash; defaults to 22</li>
+            <li><strong>Username</strong></li>
+            <li><strong>Authentication</strong> &mdash; password or an imported SSH key (RSA, Ed25519, ECDSA)</li>
+          </ul>
+        </li>
+        <li>Click <strong>Save</strong>. Pane validates the connection in real time &mdash; if the host key is new, you'll see a TOFU confirmation dialog. On success, the server appears in the sidebar.</li>
+      </ol>
 
-  <h2>Split panes</h2>
-  <p>
-    Press <kbd>⌘</kbd><kbd>D</kbd> to split horizontally (left/right) or
-    <kbd>⌘</kbd><kbd>⇧</kbd><kbd>D</kbd> to split vertically (top/bottom).
-    Navigate between panes with <kbd>⌘</kbd><kbd>⌥</kbd> + arrow keys.
-    Drag the divider between panes to resize.
-  </p>
+      <h2>Add a project</h2>
+      <p>A project is just a directory on a server.</p>
+      <ol>
+        <li>Select a server in the sidebar.</li>
+        <li>Click the <strong>+</strong> button and choose <strong>Add Project</strong>.</li>
+        <li>Browse to an existing directory, or create a new one.</li>
+        <li>The project appears in the sidebar tree. If the directory contains a <a href="configuration.html"><code>pane.json</code></a>, the project name and services are picked up automatically.</li>
+      </ol>
 
-  <h2>First-run provisioning</h2>
-  <p>
-    On first connect, Pane deploys a small Rust daemon (<code>pane-proxy</code>) to
-    <code>~/.pane/bin/</code> on the server. This happens automatically and takes a few seconds.
-    The daemon handles project registry, port forwarding, services, file operations, and the
-    browser SOCKS proxy. It's versioned and updated automatically when you update Pane.
-  </p>
+      <h2>Open a terminal</h2>
+      <p>
+        Click a workspace under a project to open it. You'll see an empty pane with action buttons.
+        Press <kbd>⌘</kbd><kbd>T</kbd> to create a new agent tab (launches Claude Code), or click
+        the terminal icon in the tab bar for a plain terminal. Each tab is backed by its own tmux session
+        on the server.
+      </p>
 
-  <h2>Cross-device sync</h2>
-  <p>
-    Your project structure, tabs, and split layout are stored in <code>~/.pane/server.json</code>
-    on each server. Connect from your Mac, your iPhone, or another Mac &mdash; they all see the
-    same workspace state. Terminal sessions are tmux, so you can start work on one device and
-    pick up exactly where you left off on another.
-  </p>
+      <h2>Split panes</h2>
+      <p>
+        Press <kbd>⌘</kbd><kbd>D</kbd> to split horizontally (left/right) or
+        <kbd>⌘</kbd><kbd>⇧</kbd><kbd>D</kbd> to split vertically (top/bottom).
+        Navigate between panes with <kbd>⌘</kbd><kbd>⌥</kbd> + arrow keys.
+        Drag the divider between panes to resize.
+      </p>
 
-  <h2>Next steps</h2>
-  <ul>
-    <li><a href="configuration.html">Configure your project</a> with <code>pane.json</code></li>
-    <li><a href="keyboard-shortcuts.html">Learn the keyboard shortcuts</a></li>
-  </ul>
+      <h2>First-run provisioning</h2>
+      <p>
+        On first connect, Pane deploys a small Rust daemon (<code>pane-proxy</code>) to
+        <code>~/.pane/bin/</code> on the server. This happens automatically and takes a few seconds.
+        The daemon handles project registry, port forwarding, services, file operations, and the
+        browser SOCKS proxy. It's versioned and updated automatically when you update Pane.
+      </p>
+
+      <h2>Cross-device sync</h2>
+      <p>
+        Your project structure, tabs, and split layout are stored in <code>~/.pane/server.json</code>
+        on each server. Connect from your Mac, your iPhone, or another Mac &mdash; they all see the
+        same workspace state. Terminal sessions are tmux, so you can start work on one device and
+        pick up exactly where you left off on another.
+      </p>
+    </article>
+  </div>
 </body>
 </html>
