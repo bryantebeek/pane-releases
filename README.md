@@ -13,6 +13,10 @@
   <a href="https://github.com/bryantebeek/pane-releases/releases/latest"><strong>Download for macOS</strong></a>
 </p>
 
+<p align="center">
+  <img src="preview.png" alt="Pane running on macOS" width="800">
+</p>
+
 ---
 
 ## What is Pane?

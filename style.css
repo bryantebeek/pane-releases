@@ -35,6 +35,14 @@ main > p { text-align: center; }
 
 .small { color: #888; font-size: 0.85rem; }
 
+.preview {
+  display: block;
+  width: 100%;
+  margin: 2rem 0 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
