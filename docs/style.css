@@ -1,0 +1,110 @@
+body {
+  font: 16px/1.6 -apple-system, system-ui, sans-serif;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+a { color: #1a1a1a; }
+a:hover { color: #555; }
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+.breadcrumb a { color: #888; text-decoration: none; }
+.breadcrumb a:hover { color: #1a1a1a; }
+
+h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 0.75rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; }
+h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+
+p { margin: 0.75rem 0; }
+
+.subtitle {
+  color: #555;
+  font-size: 1.05rem;
+  margin: 0 0 2rem;
+}
+
+code {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 0.9em;
+  background: #f5f5f5;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+pre {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; color: inherit; }
+
+.comment { color: #6a737d; }
+.string { color: #79b8ff; }
+.key { color: #b392f0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+
+td:first-child { white-space: nowrap; }
+
+kbd {
+  font-family: -apple-system, system-ui, sans-serif;
+  font-size: 0.85em;
+  background: #f5f5f5;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  box-shadow: 0 1px 0 #d0d0d0;
+}
+
+ul { padding-left: 1.5rem; }
+li { margin: 0.3rem 0; }
+
+.field-table td:first-child code {
+  font-weight: 600;
+}
+
+.note {
+  background: #f8f8f8;
+  border-left: 3px solid #d0d0d0;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  body { padding: 1.5rem 1rem; }
+  h1 { font-size: 1.5rem; }
+  table { font-size: 0.85rem; }
+  td, th { padding: 0.4rem 0.5rem; }
+}
