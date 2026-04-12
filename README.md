@@ -63,7 +63,7 @@ Pane gives you a single app to manage all your remote dev environments. SSH into
 
 - macOS 15 or later (macOS app)
 - iOS 18 or later (iPhone app)
-- An SSH server with tmux installed
+- `tmux` installed (locally on your Mac, or on a remote SSH server)
 
 ## Install
 
