@@ -3,20 +3,17 @@ body {
   max-width: 40rem;
   margin: 0 auto;
   padding: 3rem 1.5rem;
-  color: rgba(255,255,255,0.85);
-  background: rgb(13,13,13);
+  color: #1a1a1a;
+  background: #fff;
 }
-
-a { color: rgba(255,255,255,0.85); }
-a:hover { color: #fff; }
 
 .icon { display: block; margin: 0 auto 1rem; border-radius: 22%; }
 
-h1 { font-size: 2.5rem; margin: 0; text-align: center; color: #fff; }
+h1 { font-size: 2.5rem; margin: 0; text-align: center; }
 
 .tagline {
   text-align: center;
-  color: rgba(255,255,255,0.45);
+  color: #555;
   font-size: 1.15rem;
   margin: 0.25rem 0 1.5rem;
 }
@@ -26,18 +23,17 @@ main > p { text-align: center; }
 .download {
   display: inline-block;
   padding: 0.65rem 1.4rem;
-  background: rgba(255,255,255,0.1);
+  background: #1a1a1a;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: background 0.15s;
 }
 
-.download:hover { background: rgba(255,255,255,0.15); }
+.download:hover { background: #333; }
 
-.small { color: rgba(255,255,255,0.35); font-size: 0.85rem; }
+.small { color: #888; font-size: 0.85rem; }
 
 .features {
   display: grid;
@@ -45,23 +41,22 @@ main > p { text-align: center; }
   gap: 1.5rem;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid #e5e5e5;
 }
 
-.feature h3 { font-size: 1rem; margin: 0 0 0.3rem; color: rgba(255,255,255,0.85); }
-.feature p { margin: 0; color: rgba(255,255,255,0.45); font-size: 0.9rem; line-height: 1.5; }
+.feature h3 { font-size: 1rem; margin: 0 0 0.3rem; }
+.feature p { margin: 0; color: #555; font-size: 0.9rem; line-height: 1.5; }
 
 .docs-section {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid #e5e5e5;
 }
 
 .docs-section h2 {
   font-size: 1.3rem;
   margin: 0 0 1rem;
   text-align: left;
-  color: rgba(255,255,255,0.85);
 }
 
 .docs-grid {
@@ -73,21 +68,20 @@ main > p { text-align: center; }
 .doc-card {
   display: block;
   padding: 1rem 1.25rem;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
   text-decoration: none;
   color: inherit;
-  background: rgba(255,255,255,0.04);
-  transition: background 0.2s, border-color 0.2s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .doc-card:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.12);
+  border-color: #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.doc-card h3 { font-size: 0.95rem; margin: 0 0 0.25rem; color: rgba(255,255,255,0.85); }
-.doc-card p { margin: 0; color: rgba(255,255,255,0.45); font-size: 0.85rem; line-height: 1.4; }
+.doc-card h3 { font-size: 0.95rem; margin: 0 0 0.25rem; }
+.doc-card p { margin: 0; color: #555; font-size: 0.85rem; line-height: 1.4; }
 
 @media (max-width: 600px) {
   .features, .docs-grid { grid-template-columns: 1fr; }
