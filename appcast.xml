@@ -8,5 +8,18 @@
     <description>Pane macOS update feed</description>
     <language>en</language>
     <!-- New <item> entries get pasted here, newest first. -->
+    <item>
+      <title>Pane 0.1.0</title>
+      <pubDate>Sat, 12 Apr 2026 16:30:00 +0000</pubDate>
+      <sparkle:version>1776004686</sparkle:version>
+      <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://github.com/bryantebeek/pane-releases/releases/download/v0.1.0/Pane-0.1.0.zip"
+        length="30912645"
+        type="application/octet-stream"
+        sparkle:edSignature="fwi6a8WRqwntbtk5DVdFQfsYG6F3hffKTCeo6LCiZz4kMb5xht/Nr07+MhQvBjzClMb/3B7cZ8egtrTrHBjeAg=="
+      />
+    </item>
   </channel>
 </rss>
