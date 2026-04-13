@@ -62,16 +62,16 @@
     <img src="preview.png" alt="Pane running on macOS">
   </div>
 
-  <!-- ─── Feature: Ghostty Terminal ─── -->
+  <!-- ─── Feature: tmux-backed terminals ─── -->
   <section class="feat" id="terminal">
     <div class="container feat-row">
       <div class="feat-text">
-        <h2>Ghostty terminal</h2>
-        <p>GPU-accelerated rendering with Metal. Full xterm-256color support, ligatures, and true color. Every tab is its own tmux session on the server &mdash; close the app, reopen it, and your terminals are exactly where you left them.</p>
+        <h2>Persistent tmux sessions</h2>
+        <p>Every tab is its own tmux session on the server. Close the app, reopen it tomorrow, switch to your phone &mdash; your terminals are exactly where you left them. Rendered with Ghostty's GPU-accelerated Metal engine for full xterm-256color, ligatures, and true color.</p>
         <ul class="feat-list">
+          <li>Sessions survive app restarts, disconnects, and device switches</li>
           <li>Horizontal and vertical splits with draggable dividers</li>
-          <li>Sessions persist across app restarts and device switches</li>
-          <li>Configurable fonts, themes, and key bindings</li>
+          <li>No tmux config required &mdash; Pane manages sessions automatically</li>
         </ul>
       </div>
       <div class="feat-visual">
