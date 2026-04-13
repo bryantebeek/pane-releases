@@ -510,6 +510,17 @@ nav {
   background: none;
   margin: 0;
   border-radius: 0;
+  max-width: 100%;
+}
+
+.mock-code {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.feat-visual {
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* ── Diagram ── */
@@ -779,6 +790,11 @@ footer {
   .mock-divider-v {
     width: auto;
     height: 1px;
+  }
+
+  .code-block {
+    font-size: 10px;
+    padding: 12px 14px;
   }
 
   .mock-phone { width: 220px; }
