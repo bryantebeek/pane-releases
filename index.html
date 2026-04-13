@@ -11,11 +11,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://bryantebeek.github.io/pane-releases/preview.png">
   <link rel="icon" href="icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <nav>
-    <div class="nav-inner">
+    <div class="container nav-inner">
       <a href="/" class="nav-brand">
         <img src="icon.png" alt="Pane" width="28" height="28">
         Pane
@@ -31,62 +35,295 @@
     </div>
   </nav>
 
+  <!-- ─── Hero ─── -->
   <section class="hero">
-    <h1>Remote dev environments<br>on macOS &amp; iOS</h1>
-    <p class="subtitle">
-      Connect to your servers over SSH. Organize projects into workspaces.
-      Split terminals, run services, browse files, view diffs &mdash; all from
-      a single native app.
-    </p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="https://github.com/bryantebeek/pane-releases/releases/latest">
-        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 00-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43z"/></svg>
-        Download for macOS
-      </a>
-      <a class="btn-secondary" href="https://github.com/bryantebeek/pane-releases/releases/latest">
-        Releases
-      </a>
-    </div>
-    <div class="hero-meta">
-      Requires macOS 15+. Auto-updates via Sparkle.<br>
-      Or install with Homebrew: <code>brew install --cask bryantebeek/tap/pane</code>
+    <div class="container">
+      <h1>Remote dev environments<br>on macOS &amp; iOS</h1>
+      <p class="subtitle">
+        Connect to your servers over SSH. Organize projects into workspaces.
+        Split terminals, run services, browse files, view diffs &mdash; all from
+        a single native app. Start on your Mac, pick up on your iPhone.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://github.com/bryantebeek/pane-releases/releases/latest">
+          <svg viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 00-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43z"/></svg>
+          Download for macOS
+        </a>
+        <a class="btn-secondary" href="https://github.com/bryantebeek/pane-releases/releases/latest">Releases</a>
+      </div>
+      <div class="hero-meta">
+        Requires macOS 15+. Auto-updates via Sparkle.<br>
+        Or install with Homebrew: <code>brew install --cask bryantebeek/tap/pane</code>
+      </div>
     </div>
   </section>
 
-  <div class="preview-wrap">
+  <div class="preview-wrap container">
     <img src="preview.png" alt="Pane running on macOS">
   </div>
 
-  <section class="features-section">
-    <div class="features-grid">
-      <div class="feature">
-        <h3>Ghostty Terminal</h3>
-        <p>GPU-accelerated terminal rendering with Metal. Full xterm-256color, split panes, and tmux-backed sessions that persist across restarts.</p>
+  <!-- ─── Feature: Ghostty Terminal ─── -->
+  <section class="feat" id="terminal">
+    <div class="container feat-row">
+      <div class="feat-text">
+        <h2>Ghostty terminal</h2>
+        <p>GPU-accelerated rendering with Metal. Full xterm-256color support, ligatures, and true color. Every tab is its own tmux session on the server &mdash; close the app, reopen it, and your terminals are exactly where you left them.</p>
+        <ul class="feat-list">
+          <li>Horizontal and vertical splits with draggable dividers</li>
+          <li>Sessions persist across app restarts and device switches</li>
+          <li>Configurable fonts, themes, and key bindings</li>
+        </ul>
       </div>
-      <div class="feature">
-        <h3>Project Workspaces</h3>
-        <p>Organize servers into projects and workspaces. Branch workspaces create git worktrees. Layout syncs across every connected device.</p>
-      </div>
-      <div class="feature">
-        <h3>Services</h3>
-        <p>Declare dev servers and workers in pane.json. Start, stop, and health-check them from the sidebar. Open service URLs in a built-in browser.</p>
-      </div>
-      <div class="feature">
-        <h3>AI Agents</h3>
-        <p>Launch Claude Code or any CLI agent in a dedicated tab. Get attention pulses when agents need input. Auto-generated tab titles from conversation context.</p>
-      </div>
-      <div class="feature">
-        <h3>Remote Browser</h3>
-        <p>Browse localhost and internal URLs on remote servers. All traffic routes through a SOCKS proxy on the host &mdash; no port forwarding needed.</p>
-      </div>
-      <div class="feature">
-        <h3>iOS</h3>
-        <p>Full terminal on your iPhone with the same Ghostty engine and tmux sessions. Speech input, file browser, and seamless handoff between devices.</p>
+      <div class="feat-visual">
+        <div class="mock-window">
+          <div class="mock-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="mock-title">Terminal &mdash; dev.example.com</span>
+          </div>
+          <div class="mock-splits">
+            <div class="mock-pane">
+              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ git log --oneline -3</code>
+              <code><span class="c-yellow">a1b2c3d</span> feat: add dashboard API</code>
+              <code><span class="c-yellow">e4f5g6h</span> fix: session timeout</code>
+              <code><span class="c-yellow">i7j8k9l</span> refactor: auth middleware</code>
+              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ <span class="cursor">_</span></code>
+            </div>
+            <div class="mock-divider-v"></div>
+            <div class="mock-pane">
+              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ npm run dev</code>
+              <code class="c-dim">  &gt; acme@2.1.0 dev</code>
+              <code class="c-dim">  &gt; next dev --turbopack</code>
+              <code></code>
+              <code>  <span class="c-green">&#9650;</span> Next.js 15.3 (Turbopack)</code>
+              <code>  - Local: <span class="c-cyan">http://localhost:3000</span></code>
+              <code>  <span class="c-green">&#10003;</span> Ready in 1.2s</code>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="docs-section">
+  <!-- ─── Feature: Workspaces ─── -->
+  <section class="feat" id="workspaces">
+    <div class="container feat-row feat-row-reverse">
+      <div class="feat-text">
+        <h2>Project workspaces</h2>
+        <p>Organize your servers into projects and workspaces. Each workspace maps to a git branch &mdash; creating a branch workspace automatically creates a git worktree on the server. Your full layout syncs across every connected device.</p>
+        <ul class="feat-list">
+          <li>Server &rarr; Project &rarr; Workspace &rarr; Tabs hierarchy</li>
+          <li>Branch workspaces create git worktrees automatically</li>
+          <li>Layout syncs across Mac and iPhone in real time</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-sidebar">
+          <div class="mock-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <div class="sidebar-tree">
+            <div class="tree-item server"><span class="tree-icon">&#9679;</span> dev.example.com</div>
+            <div class="tree-item project indent-1"><span class="tree-icon folder">&#9660;</span> acme-app</div>
+            <div class="tree-item workspace indent-2 active"><span class="tree-icon branch">&#9702;</span> main</div>
+            <div class="tree-item tab indent-3"><span class="tree-icon">&#9645;</span> Terminal</div>
+            <div class="tree-item tab indent-3"><span class="tree-icon">&#9645;</span> npm run dev</div>
+            <div class="tree-item tab indent-3 agent"><span class="tree-icon">&#9645;</span> Claude Code <span class="status-dot working"></span></div>
+            <div class="tree-item workspace indent-2"><span class="tree-icon branch">&#9702;</span> feat/dashboard</div>
+            <div class="tree-item tab indent-3"><span class="tree-icon">&#9645;</span> Terminal</div>
+            <div class="tree-item project indent-1"><span class="tree-icon folder">&#9660;</span> infra</div>
+            <div class="tree-item workspace indent-2"><span class="tree-icon branch">&#9702;</span> main</div>
+            <div class="tree-item server"><span class="tree-icon">&#9679;</span> staging.internal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Feature: CLI Agents ─── -->
+  <section class="feat" id="agents">
+    <div class="container feat-row">
+      <div class="feat-text">
+        <h2>Your CLI, your subscription</h2>
+        <p>Pane gives you a terminal. Run any CLI tool you want &mdash; Claude Code, Codex, Gemini CLI, or anything else. These are standard command-line programs that run on your server with your own account and subscription. Pane doesn't wrap, intercept, or proxy anything.</p>
+        <p>What Pane adds on top:</p>
+        <ul class="feat-list">
+          <li><strong>Attention detection</strong> &mdash; when an agent emits a notification, Pane shows an orange pulse in the sidebar so you know it needs input</li>
+          <li><strong>Auto-generated tab titles</strong> &mdash; agent tabs get named from their conversation context so you can tell them apart</li>
+          <li><strong>Usage tracking</strong> &mdash; see your remaining Claude, Codex, and Gemini quota right inside the app</li>
+          <li><strong>Status indicators</strong> &mdash; see at a glance whether an agent is working, waiting, or done</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-window">
+          <div class="mock-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="mock-title">Claude Code &mdash; acme-app</span>
+          </div>
+          <div class="mock-agent">
+            <div class="agent-msg user">
+              <span class="agent-role">You</span>
+              Add a health check endpoint to the API
+            </div>
+            <div class="agent-msg assistant">
+              <span class="agent-role">Claude</span>
+              I'll add a <code>/health</code> endpoint that checks the database connection and returns the service status.
+              <div class="agent-files">
+                <div class="agent-file"><span class="c-green">+</span> src/routes/health.ts <span class="c-dim">+24</span></div>
+                <div class="agent-file"><span class="c-yellow">~</span> src/index.ts <span class="c-dim">+2 -0</span></div>
+                <div class="agent-file"><span class="c-green">+</span> tests/health.test.ts <span class="c-dim">+18</span></div>
+              </div>
+            </div>
+            <div class="agent-status">
+              <span class="pulse"></span> Waiting for input
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Feature: Services ─── -->
+  <section class="feat" id="services">
+    <div class="container feat-row feat-row-reverse">
+      <div class="feat-text">
+        <h2>Services</h2>
+        <p>Define your dev servers, workers, and log tailers in a <code>pane.json</code> file at the root of your project. Pane starts them as background tmux sessions on the server and monitors their health. Start, stop, and restart from the sidebar.</p>
+        <ul class="feat-list">
+          <li>Declare services once, run them everywhere</li>
+          <li>Health checks via URL probes with configurable intervals</li>
+          <li>Open service URLs in the built-in remote browser</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-window mock-code">
+          <div class="mock-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="mock-title">pane.json</span>
+          </div>
+          <pre class="code-block"><span class="c-dim">{</span>
+  <span class="c-cyan">"name"</span>: <span class="c-green">"acme-app"</span>,
+  <span class="c-cyan">"services"</span>: [
+    {
+      <span class="c-cyan">"name"</span>: <span class="c-green">"Next.js"</span>,
+      <span class="c-cyan">"command"</span>: <span class="c-green">"npm run dev"</span>,
+      <span class="c-cyan">"url"</span>: <span class="c-green">"http://localhost:3000"</span>,
+      <span class="c-cyan">"healthCheck"</span>: {
+        <span class="c-cyan">"path"</span>: <span class="c-green">"/api/health"</span>,
+        <span class="c-cyan">"interval"</span>: <span class="c-orange">5</span>
+      }
+    },
+    {
+      <span class="c-cyan">"name"</span>: <span class="c-green">"Stripe webhook"</span>,
+      <span class="c-cyan">"command"</span>: <span class="c-green">"stripe listen --forward-to localhost:3000/api/webhook"</span>
+    }
+  ]
+<span class="c-dim">}</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Feature: Remote Browser ─── -->
+  <section class="feat" id="browser">
+    <div class="container feat-row">
+      <div class="feat-text">
+        <h2>Remote browser</h2>
+        <p>Browse <code>localhost</code> URLs running on your server without setting up port forwarding. Pane routes all traffic through a SOCKS proxy over your SSH connection &mdash; the built-in browser sees what the server sees.</p>
+        <ul class="feat-list">
+          <li>No port forwarding, no tunnels, no extra config</li>
+          <li>Access internal URLs and services behind the firewall</li>
+          <li>Open service URLs directly from the sidebar</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-diagram">
+          <div class="diagram-node laptop">
+            <div class="diagram-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 17h20"/><path d="M6 21h12"/></svg>
+            </div>
+            <span>Your Mac</span>
+            <span class="diagram-sub">Pane app</span>
+          </div>
+          <div class="diagram-arrow">
+            <span>SSH</span>
+            <div class="arrow-line"></div>
+          </div>
+          <div class="diagram-node server-node">
+            <div class="diagram-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="18" r="1" fill="currentColor"/></svg>
+            </div>
+            <span>Server</span>
+            <span class="diagram-sub">SOCKS proxy</span>
+          </div>
+          <div class="diagram-arrow">
+            <span>localhost</span>
+            <div class="arrow-line"></div>
+          </div>
+          <div class="diagram-node app-node">
+            <div class="diagram-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <span>Your app</span>
+            <span class="diagram-sub">:3000, :8080, ...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Feature: iOS ─── -->
+  <section class="feat" id="ios">
+    <div class="container feat-row feat-row-reverse">
+      <div class="feat-text">
+        <h2>Full terminal on iOS</h2>
+        <p>The same Ghostty engine and tmux sessions, on your iPhone. Open a terminal on your Mac, pick it up on your phone. Speech-to-text input, a file browser, and the same project workspace layout you set up on desktop.</p>
+        <ul class="feat-list">
+          <li>Same Ghostty terminal engine as macOS</li>
+          <li>Speech input for hands-free terminal commands</li>
+          <li>File browser with syntax-highlighted viewer</li>
+          <li>Git diff viewer with unified diff display</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="c-dim">&larr;</span>
+              <span>acme-app / main</span>
+              <span class="c-dim">+</span>
+            </div>
+            <div class="phone-tabs">
+              <span class="phone-tab active">Terminal</span>
+              <span class="phone-tab">Claude Code</span>
+              <span class="phone-tab">Dev server</span>
+            </div>
+            <div class="phone-terminal">
+              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$</code>
+              <code>git status</code>
+              <code class="c-dim">On branch main</code>
+              <code></code>
+              <code class="c-green">  modified:  src/index.ts</code>
+              <code class="c-green">  modified:  src/routes/health.ts</code>
+              <code class="c-red">  deleted:   src/legacy/auth.ts</code>
+              <code></code>
+              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ <span class="cursor">_</span></code>
+            </div>
+            <div class="phone-toolbar">
+              <span>esc</span>
+              <span>tab</span>
+              <span>ctrl</span>
+              <span>&uarr;</span>
+              <span>&darr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Docs ─── -->
+  <section class="docs-section container">
     <h2>Documentation</h2>
     <div class="docs-grid">
       <a href="docs/getting-started.html" class="doc-card">
@@ -105,12 +342,15 @@
   </section>
 
   <footer>
-    <div class="footer-left">Pane</div>
-    <div class="footer-links">
-      <a href="docs/getting-started.html">Docs</a>
-      <a href="docs/keyboard-shortcuts.html">Shortcuts</a>
-      <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+    <div class="container footer-inner">
+      <div class="footer-left">Pane</div>
+      <div class="footer-links">
+        <a href="docs/getting-started.html">Docs</a>
+        <a href="docs/keyboard-shortcuts.html">Shortcuts</a>
+        <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>
