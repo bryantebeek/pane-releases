@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Changelog — Pane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../icon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="docs-layout">
+    <aside class="sidebar">
+      <a href="../" class="sidebar-brand">
+        <img src="../icon.png" width="28" height="28" alt="Pane">
+        <span>Pane</span>
+      </a>
+      <input type="checkbox" id="menu" class="menu-toggle">
+      <label for="menu" class="menu-label">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5h12M3 9h12M3 13h12" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </label>
+      <div class="sidebar-section">
+        <div class="sidebar-heading">Documentation</div>
+        <a href="getting-started.html" class="sidebar-link">Getting Started</a>
+        <a href="configuration.html" class="sidebar-link">Configuration</a>
+        <a href="keyboard-shortcuts.html" class="sidebar-link">Keyboard Shortcuts</a>
+        <a href="changelog.html" class="sidebar-link active">Changelog</a>
+      </div>
+      <div class="sidebar-footer">
+        <a href="https://github.com/bryantebeek/pane-releases/releases/latest">Download</a>
+        <a href="https://github.com/bryantebeek/pane-releases">GitHub</a>
+      </div>
+    </aside>
+
+    <article class="content">
+      <h1>Changelog</h1>
+      <p class="subtitle">Release notes for every version of Pane.</p>
+
+      <h2>0.2.0 <span class="changelog-date">— April 13, 2026</span></h2>
+
+      <h3>Filesystem Watcher</h3>
+      <ul>
+        <li>Git panel and file index now update instantly via native filesystem events instead of polling every 30 seconds</li>
+      </ul>
+
+      <h3>Command Palette</h3>
+      <ul>
+        <li><kbd>⌘</kbd><kbd>P</kbd> now includes workspaces, agent tabs, and service tabs &mdash; not just files and terminals</li>
+        <li>Tab-type registration so all tab kinds appear in the palette automatically</li>
+      </ul>
+
+      <h3>Workspaces</h3>
+      <ul>
+        <li>New &ldquo;New Workspace from Branch&rdquo; option in the project context menu &mdash; pick an existing branch and create a worktree-backed workspace</li>
+      </ul>
+
+      <h3>Browser</h3>
+      <ul>
+        <li>Websites now get the full Safari experience instead of degraded embedded-webview pages</li>
+        <li>Added back/forward swipe gestures, fullscreen support, and JS popup windows</li>
+      </ul>
+
+      <h3>Window</h3>
+      <ul>
+        <li>Window size and position are now remembered across launches</li>
+      </ul>
+
+      <h3>Keyboard &amp; Focus</h3>
+      <ul>
+        <li>Rewrote the focus system for more reliable keyboard handling</li>
+        <li>Fixed arrow keys not working in the command palette</li>
+      </ul>
+
+      <h3>Other</h3>
+      <ul>
+        <li>Lowered deployment targets to macOS 15 / iOS 17</li>
+        <li>Added sandbox mode in the Debug menu for testing the empty-state experience</li>
+      </ul>
+
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.2.0">Release on GitHub &rarr;</a></p>
+
+      <h2>0.1.2 <span class="changelog-date">— April 12, 2026</span></h2>
+      <ul>
+        <li><strong>Rich tooltips</strong> &mdash; Toolbar buttons now show Xcode-style floating tooltips with keyboard shortcut hints, replacing the default macOS tooltip</li>
+        <li><strong>Version display</strong> &mdash; The proxy status bar now shows the app version on the left side</li>
+        <li><strong>Sidebar layout</strong> &mdash; Server tree row labels now truncate with an ellipsis instead of wrapping to multiple lines</li>
+      </ul>
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.1.2">Release on GitHub &rarr;</a></p>
+
+      <h2>0.1.1 <span class="changelog-date">— April 12, 2026</span></h2>
+      <ul>
+        <li>DMG distribution for a smoother Gatekeeper experience</li>
+        <li>Homebrew cask support (<code>brew install --cask bryantebeek/tap/pane</code>)</li>
+      </ul>
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.1.1">Release on GitHub &rarr;</a></p>
+
+      <h2>0.1.0 <span class="changelog-date">— April 12, 2026</span></h2>
+      <ul>
+        <li>First Developer ID build</li>
+        <li>Auto-update via Sparkle</li>
+      </ul>
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.1.0">Release on GitHub &rarr;</a></p>
+    </article>
+  </div>
+</body>
+</html>

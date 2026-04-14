@@ -120,6 +120,12 @@ a:hover { color: #555; }
 
 .content h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
 
+.changelog-date {
+  font-weight: 400;
+  color: #888;
+  font-size: 0.9em;
+}
+
 .content p { margin: 0.75rem 0; }
 
 code {
