@@ -9,6 +9,20 @@
     <language>en</language>
     <!-- New <item> entries get pasted here, newest first. -->
     <item>
+      <title>Pane 0.3.0</title>
+      <pubDate>Tue, 14 Apr 2026 17:33:28 +0200</pubDate>
+      <sparkle:version>1776180568</sparkle:version>
+      <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://github.com/bryantebeek/pane-releases/releases/tag/v0.3.0</sparkle:releaseNotesLink>
+      <enclosure
+        url="https://github.com/bryantebeek/pane-releases/releases/download/v0.3.0/Pane-0.3.0.zip"
+        length="30814957"
+        type="application/octet-stream"
+        sparkle:edSignature="eoVpRDKnWihSut/fBg8lbz6b3Qsh+r3EPCSmE7urM1pSOlF8vDneal8bCCd+5bzFQ5foUNbhuv7L9ghYaYalBQ=="
+      />
+    </item>
+    <item>
       <title>Pane 0.2.0</title>
       <pubDate>Mon, 13 Apr 2026 17:02:49 +0200</pubDate>
       <sparkle:version>1776092296</sparkle:version>

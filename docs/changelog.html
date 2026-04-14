@@ -35,6 +35,56 @@
       <h1>Changelog</h1>
       <p class="subtitle">Release notes for every version of Pane.</p>
 
+      <h2>0.3.0 <span class="changelog-date">— April 14, 2026</span></h2>
+
+      <h3>Pane CLI</h3>
+      <ul>
+        <li>New <code>pane</code> command for driving Pane from inside any terminal tab &mdash; opens, closes, lists, and renames tabs, workspaces, and projects, and writes/reads scratchpads from the shell</li>
+        <li>Auto-spawns the daemon on first invocation over a local Unix socket, with TOON + JSON output formats for agent piping</li>
+        <li>Replaces the old MCP server with a single CLI surface that agents can shell out to</li>
+      </ul>
+
+      <h3>Agent-aware Terminals</h3>
+      <ul>
+        <li>Agents (Claude, etc.) now signal back to Pane via shell hooks &mdash; tabs rename on Enter instead of after a 5s delay, system notifications fire when an agent needs attention</li>
+        <li>Claude wrapper injects a session-start hook so agents get ambient Pane context (current project, workspace, tab) automatically</li>
+      </ul>
+
+      <h3>Proxy Reliability</h3>
+      <ul>
+        <li>New supervisor restarts the proxy on crash with exponential backoff and a circuit breaker</li>
+        <li>Panic backtraces are written to <code>daemon.log</code>; Pane surfaces the log tail when the supervisor gives up</li>
+        <li>Per-RPC dispatch eliminates head-of-line blocking, and a per-workspace fuzzy search index powers faster file finding</li>
+      </ul>
+
+      <h3>iPad</h3>
+      <ul>
+        <li>Renders the full Mac desktop layout on iPad in regular horizontal size class, with a new semantic light/dark palette and appearance picker</li>
+        <li>Long workspace names now head-truncate so tab bars stay readable</li>
+      </ul>
+
+      <h3>Files Panel</h3>
+      <ul>
+        <li>Optional toggle to reveal gitignored entries</li>
+        <li>Lazy per-directory tree (no stale full-tree cache) and auto-refetch when you switch workspace or project</li>
+        <li>Markdown preview in the palette</li>
+      </ul>
+
+      <h3>Chrome &amp; Keyboard</h3>
+      <ul>
+        <li>New <kbd>⌘</kbd><kbd>⇧</kbd><kbd>/</kbd> keyboard shortcut cheatsheet overlay</li>
+        <li>Palette tab disambiguation and section reordering</li>
+        <li>Branch picker reuses an existing worktree path instead of creating a duplicate</li>
+      </ul>
+
+      <h3>iOS</h3>
+      <ul>
+        <li>Tab context menu replaced with a popover, with a combined tap + long-press overlay and a slightly longer 0.35s long-press</li>
+        <li>Active tab highlighting now falls back to the current workspace on the dashboard</li>
+      </ul>
+
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.3.0">Release on GitHub &rarr;</a></p>
+
       <h2>0.2.0 <span class="changelog-date">— April 13, 2026</span></h2>
 
       <h3>Filesystem Watcher</h3>
