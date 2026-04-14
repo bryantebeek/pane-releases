@@ -40,9 +40,10 @@
     <div class="container">
       <h1>The remote-first<br>agent orchestrator</h1>
       <p class="subtitle">
-        Connect to your servers over SSH. Organize projects into workspaces.
-        Split terminals, run services, browse files, view diffs &mdash; all from
-        a single native app. Start on your Mac, pick up on your iPhone.
+        Connect to remote servers over SSH or work on your local Mac. Organize
+        projects into workspaces. Split terminals, run services, browse files,
+        view diffs &mdash; all from a single native app. Start on your Mac,
+        pick up on your iPhone or iPad.
       </p>
       <div class="hero-actions">
         <a class="btn-primary" href="https://github.com/bryantebeek/pane-releases/releases/latest">
@@ -82,15 +83,15 @@
           </div>
           <div class="mock-splits">
             <div class="mock-pane">
-              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ git log --oneline -3</code>
+              <code><span class="c-green">pane@dev</span>:<span class="c-blue">~/acme</span>$ git log --oneline -3</code>
               <code><span class="c-yellow">a1b2c3d</span> feat: add dashboard API</code>
               <code><span class="c-yellow">e4f5g6h</span> fix: session timeout</code>
               <code><span class="c-yellow">i7j8k9l</span> refactor: auth middleware</code>
-              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ <span class="cursor">_</span></code>
+              <code><span class="c-green">pane@dev</span>:<span class="c-blue">~/acme</span>$ <span class="cursor">_</span></code>
             </div>
             <div class="mock-divider-v"></div>
             <div class="mock-pane">
-              <code><span class="c-green">bryan@dev</span>:<span class="c-blue">~/acme</span>$ npm run dev</code>
+              <code><span class="c-green">pane@dev</span>:<span class="c-blue">~/acme</span>$ npm run dev</code>
               <code class="c-dim">  &gt; acme@2.1.0 dev</code>
               <code class="c-dim">  &gt; next dev --turbopack</code>
               <code></code>
@@ -143,13 +144,12 @@
   <section class="feat" id="agents">
     <div class="container feat-row">
       <div class="feat-text">
-        <h2>Your CLI, your subscription</h2>
-        <p>Pane gives you a terminal. Run any CLI tool you want &mdash; Claude Code, Codex, Gemini CLI, or anything else. These are standard command-line programs that run on your server with your own account and subscription. Pane doesn't wrap, intercept, or proxy anything.</p>
+        <h2>Your CLI, your tools</h2>
+        <p>Pane gives you a terminal. Run any agent CLI you want &mdash; Claude Code, Codex CLI, Gemini CLI, Cursor CLI, Amp Code, Aider, OpenCode, or anything else. These are standard command-line programs that run on your server with your own account and subscription. Pane doesn't wrap, intercept, or proxy anything.</p>
         <p>What Pane adds on top:</p>
         <ul class="feat-list">
           <li><strong>Attention detection</strong> &mdash; when an agent emits a notification, Pane shows an orange pulse in the sidebar so you know it needs input</li>
           <li><strong>Auto-generated tab titles</strong> &mdash; agent tabs get named from their conversation context so you can tell them apart</li>
-          <li><strong>Usage tracking</strong> &mdash; see your remaining Claude, Codex, and Gemini quota right inside the app</li>
           <li><strong>Status indicators</strong> &mdash; see at a glance whether an agent is working, waiting, or done</li>
         </ul>
       </div>
@@ -271,14 +271,52 @@
     </div>
   </section>
 
+  <!-- ─── Feature: Setup ─── -->
+  <section class="feat" id="setup">
+    <div class="container feat-row">
+      <div class="feat-text">
+        <h2>Connect any way you work</h2>
+        <p>Pane connects over SSH to any server, VM, or container with an SSH daemon. There's no agent to install, no cloud account, no telemetry. Pane drops a small Rust proxy onto your server the first time you connect &mdash; everything else stays in standard SSH.</p>
+        <p>If you don't have a remote server, point Pane at your own Mac:</p>
+        <ul class="feat-list">
+          <li><strong>Local Mac</strong> &mdash; run Pane against the same machine for a fully native, zero-config workspace</li>
+          <li><strong>Mac via Tailscale</strong> &mdash; turn on <em>Settings &rarr; General &rarr; Sharing &rarr; Remote Login</em> and connect over your Tailnet from your iPhone or iPad anywhere in the world</li>
+          <li><strong>Any SSH host</strong> &mdash; cloud VMs, home servers, dev boxes, Raspberry Pis &mdash; if you can <code>ssh</code> in, Pane works</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="mock-diagram">
+          <div class="diagram-node laptop">
+            <div class="diagram-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <span>iPhone / iPad</span>
+            <span class="diagram-sub">Pane app</span>
+          </div>
+          <div class="diagram-arrow">
+            <span>Tailscale</span>
+            <div class="arrow-line"></div>
+          </div>
+          <div class="diagram-node server-node">
+            <div class="diagram-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 17h20"/><path d="M6 21h12"/></svg>
+            </div>
+            <span>Your Mac</span>
+            <span class="diagram-sub">Remote Login on</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Feature: iOS ─── -->
   <section class="feat" id="ios">
     <div class="container feat-row feat-row-reverse">
       <div class="feat-text">
-        <h2>Full terminal on iOS</h2>
-        <p>The same Ghostty engine and tmux sessions, on your iPhone. Open a terminal on your Mac, pick it up on your phone. Speech-to-text input, a file browser, and the same project workspace layout you set up on desktop.</p>
+        <h2>Full terminal on iPhone &amp; iPad</h2>
+        <p>The same Ghostty engine and tmux sessions, on iPhone and iPad. Open a terminal on your Mac, pick it up on your phone or tablet. Speech-to-text input, a file browser, and the same project workspace layout you set up on desktop.</p>
         <ul class="feat-list">
-          <li>Same Ghostty terminal engine as macOS</li>
+          <li>Native iPhone and iPad apps with the same Ghostty engine as macOS</li>
           <li>Speech input for hands-free terminal commands</li>
           <li>File browser with syntax-highlighted viewer</li>
           <li>Git diff viewer with unified diff display</li>
@@ -286,34 +324,28 @@
       </div>
       <div class="feat-visual">
         <div class="phone-pair">
-          <img src="ios-sidebar.png" alt="Pane on iPhone — server and project sidebar" class="phone-shot phone-back">
-          <img src="ios-agent.png" alt="Pane on iPhone — Claude Code agent session" class="phone-shot phone-front">
+          <div class="phone-frame phone-back">
+            <div class="phone-screen">
+              <img src="ios-sidebar.png" alt="Pane on iPhone — server and project sidebar">
+              <div class="phone-island"></div>
+            </div>
+          </div>
+          <div class="phone-frame phone-front">
+            <div class="phone-screen">
+              <img src="ios-agent.png" alt="Pane on iPhone — Claude Code agent session">
+              <div class="phone-island"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Docs ─── -->
-  <section class="docs-section container">
-    <h2>Documentation</h2>
-    <div class="docs-grid">
-      <a href="docs/getting-started.html" class="doc-card">
-        <h3>Getting Started</h3>
-        <p>Install Pane, connect to a server, and open your first terminal.</p>
-      </a>
-      <a href="docs/configuration.html" class="doc-card">
-        <h3>Configuration</h3>
-        <p>Set up pane.json to name your project, declare services, and define health checks.</p>
-      </a>
-      <a href="docs/keyboard-shortcuts.html" class="doc-card">
-        <h3>Keyboard Shortcuts</h3>
-        <p>Tabs, splits, palettes, and navigation &mdash; the full macOS shortcut reference.</p>
-      </a>
-      <a href="docs/changelog.html" class="doc-card">
-        <h3>Changelog</h3>
-        <p>What's new in each release &mdash; features, fixes, and behavior changes by version.</p>
-      </a>
-    </div>
+  <!-- ─── Docs CTA ─── -->
+  <section class="docs-cta container">
+    <h2>Read the docs</h2>
+    <p>Install Pane, configure your projects, learn the shortcuts, and follow what's new in each release.</p>
+    <a href="docs/getting-started.html" class="docs-cta-btn">Open documentation →</a>
   </section>
 
   <footer>
