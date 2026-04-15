@@ -35,6 +35,42 @@
       <h1>Changelog</h1>
       <p class="subtitle">Release notes for every version of Pane.</p>
 
+      <h2>0.4.0 <span class="changelog-date">— April 15, 2026</span></h2>
+
+      <h3>New</h3>
+      <ul>
+        <li><strong>Mermaid diagram tab</strong> &mdash; live-rendered editor + preview split with pan, zoom (⌘+/⌘-, ⌘-scroll, pinch), double-click to fit. Saved to the server like a scratchpad. CLI: <code>pane mermaid open/cat/write</code></li>
+        <li><strong>Find in file tab</strong> &mdash; ⌘F opens a native find bar with incremental highlighting; Find Next / Previous / Use Selection all wired through the Edit menu</li>
+        <li><strong>Fuzzy file palette is now daemon-side</strong> &mdash; ⌘P searches via the proxy using nucleo over a per-workspace index (git ls-files, with ignore fallback), so results stay fast on big repos and keystrokes don't block the main actor</li>
+        <li><strong>Shift+Enter for multiline agent prompts</strong> &mdash; terminal now sends <code>ESC+CR</code> on Shift+Enter so Claude Code / Codex / Gemini treat it as newline instead of submit</li>
+        <li><strong>Command palette: Check for Updates…</strong> &mdash; trigger a Sparkle update check from ⌘K</li>
+        <li><strong>Agent CLI seeds</strong> &mdash; <code>pane agent open --provider claude|codex|gemini --prompt "…"</code> pre-fills the launch command</li>
+        <li><strong>Sparkle release notes render natively</strong> &mdash; the appcast inlines markdown, so the update dialog no longer loads GitHub's webpage</li>
+      </ul>
+
+      <h3>Improvements</h3>
+      <ul>
+        <li><strong>Liquid Glass app icon on macOS 26</strong> &mdash; ships an Icon Composer bundle so Pane renders as a first-class icon under the new renderer</li>
+        <li><strong>Script files highlighted by shebang + basename</strong> &mdash; extensionless scripts now get syntax highlighting</li>
+        <li><strong>Terminal PATH includes <code>~/.local/bin</code></strong> &mdash; native installers for Claude Code, <code>uv</code>, <code>pipx</code>, etc. resolve without editing <code>.zshrc</code></li>
+        <li>Sidebar footer icons tightened to match the tab bar spacing</li>
+      </ul>
+
+      <h3>Fixes</h3>
+      <ul>
+        <li>iOS: long-pressing the active tab no longer scrolls it back into view</li>
+        <li>Proxy: fixed a thread-sanitizer data race in <code>SSHWriter</code></li>
+      </ul>
+
+      <h3>Under the hood</h3>
+      <ul>
+        <li>Proxy migrated to tmux <strong>control mode</strong> for lower-latency event streaming (services watcher now listens on <code>%sessions-changed</code> instead of polling)</li>
+        <li>MetricKit-backed crash reporter persists diagnostics as JSON; Debug menu gained <strong>Open Crash Reports Folder</strong> and <strong>Write Fake Crash Report</strong></li>
+        <li>Bundled <code>pane-proxy</code> is now signed with the app's Developer ID identity</li>
+      </ul>
+
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.4.0">Release on GitHub →</a></p>
+
       <h2>0.3.0 <span class="changelog-date">— April 14, 2026</span></h2>
 
       <h3>Pane CLI</h3>

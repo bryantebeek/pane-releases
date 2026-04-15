@@ -9,6 +9,48 @@
     <language>en</language>
     <!-- New <item> entries get pasted here, newest first. -->
     <item>
+      <title>Pane 0.4.0</title>
+      <pubDate>Wed, 15 Apr 2026 16:12:11 +0200</pubDate>
+      <sparkle:version>1776262098</sparkle:version>
+      <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description sparkle:format="markdown"><![CDATA[
+### New
+
+- **Mermaid diagram tab** — live-rendered editor + preview split with pan, zoom (⌘+/⌘-, ⌘-scroll, pinch), double-click to fit. Saved to the server like a scratchpad. CLI: `pane mermaid open/cat/write`.
+- **Find in file tab** — ⌘F opens a native find bar with incremental highlighting; Find Next / Previous / Use Selection all wired through the Edit menu.
+- **Fuzzy file palette is now daemon-side** — ⌘P searches via the proxy using nucleo over a per-workspace index (git ls-files, with ignore fallback), so results stay fast on big repos and keystrokes don't block the main actor.
+- **Shift+Enter for multiline agent prompts** — terminal now sends `ESC+CR` on Shift+Enter so Claude Code / Codex / Gemini treat it as newline instead of submit.
+- **Command palette: Check for Updates…** — trigger a Sparkle update check from ⌘K.
+- **Agent CLI seeds** — `pane agent open --provider claude|codex|gemini --prompt "…"` pre-fills the launch command.
+- **Sparkle release notes render natively** — the appcast inlines markdown, so the update dialog no longer loads GitHub's webpage.
+
+### Improvements
+
+- **Liquid Glass app icon on macOS 26** — ships an Icon Composer bundle so Pane renders as a first-class icon under the new renderer.
+- **Script files highlighted by shebang + basename** — extensionless scripts now get syntax highlighting.
+- **Terminal PATH includes `~/.local/bin`** — native installers for Claude Code, `uv`, `pipx`, etc. resolve without editing `.zshrc`.
+- Sidebar footer icons tightened to match the tab bar spacing.
+
+### Fixes
+
+- iOS: long-pressing the active tab no longer scrolls it back into view.
+- Proxy: fixed a thread-sanitizer data race in `SSHWriter`.
+
+### Under the hood
+
+- Proxy migrated to tmux **control mode** for lower-latency event streaming (services watcher now listens on `%sessions-changed` instead of polling).
+- MetricKit-backed crash reporter persists diagnostics as JSON; Debug menu gained **Open Crash Reports Folder** and **Write Fake Crash Report**.
+- Bundled `pane-proxy` is now signed with the app's Developer ID identity.
+]]></description>
+      <enclosure
+        url="https://github.com/bryantebeek/pane-releases/releases/download/v0.4.0/Pane-0.4.0.zip"
+        length="32969743"
+        type="application/octet-stream"
+        sparkle:edSignature="Ib5gGoQlp+C9LDLvwkjQE6Ve7pGpNC7OfFE2B4nzotbGUobjejEN73GOyU5/a6NYEvxDlf4BRLVnZdINRdNUDw=="
+      />
+    </item>
+    <item>
       <title>Pane 0.3.0</title>
       <pubDate>Tue, 14 Apr 2026 17:33:28 +0200</pubDate>
       <sparkle:version>1776180568</sparkle:version>
