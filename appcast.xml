@@ -9,6 +9,56 @@
     <language>en</language>
     <!-- New <item> entries get pasted here, newest first. -->
     <item>
+      <title>Pane 0.5.0</title>
+      <pubDate>Fri, 17 Apr 2026 18:31:12 +0200</pubDate>
+      <sparkle:version>1776443249</sparkle:version>
+      <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <description sparkle:format="markdown"><![CDATA[
+### New
+
+- **Monaco editor everywhere** — the file viewer, git diffs, and Mermaid previews now run on Monaco (VS Code's editor). More accurate syntax highlighting, better performance on big files, unified behavior across platforms. Diffs default to inline with a toggle for side-by-side, and git diffs get a side-by-side image preview.
+- **Unified command bar** — file palette and command palette merged into a single CommandBar with one UI and one set of keybindings.
+- **Tab snooze** — snooze any tab to sink it below every other kind in the sidebar; attention-requiring tabs stay bright even in inactive workspaces.
+- **Drag-to-reorder, everywhere** — servers, projects, workspaces, and tabs can all be dragged into your preferred order. Pinned files in the macOS Files panel too.
+- **iOS on the App Store** — Pane now ships to TestFlight with an official iOS release workflow.
+- **iPadOS support** — iPad Pro 11" M5 is a first-class target. The software keyboard pushes chrome up correctly, and portrait mode uses touch-friendly tree icons.
+- **Tile all tabs** — a new sidebar view renders every tab at once inside the workspace.
+- **Cycle waiting agents** — ⌘[ / ⌘] jumps between agents awaiting input in the current workspace. Waiting-agent shortcuts are grouped under "Agents" in the cheatsheet.
+- **iOS home screen quick actions** — long-press the app icon to jump straight into common flows.
+- **Right-click → split** — right-click a new-tab button to open that kind in a split.
+
+### Improvements
+
+- **Voice input on iOS is reliable** — stray Enters suppressed, SSH writes serialized, keystrokes routed through `tmux send-keys` with bracketed paste + delayed CR.
+- **Context menus unified** — one `paneContextMenu` across macOS and iOS, with UIKit long-press, full-width dividers, and a git-diff discard action.
+- **Sidebar polish** — non-active rows dim via opacity instead of greying out. Projects only auto-expand when they have tabs. Snoozed tabs sink below every non-snoozed kind.
+- **Files panel** — pinned files can be dragged to reorder on macOS; row heights and icon sizes tightened to match the git row.
+- **CLI** — `pane file pin` / `unpin` / `pins` for managing pinned files. Session-start help is richer.
+
+### Fixes
+
+- iPad: keyboard safe area respected so the software keyboard no longer covers chrome.
+- Add Server / Add Project: spinner only on the clicked server row.
+- iOS shortcut open handler: uses the `projectId` from `PendingOpen` instead of resolving the wrong project.
+- File tabs: dedupe by deterministic SHA256(path) so the same file can't spawn duplicates.
+- Monaco on iOS: viewport meta set so pages don't auto-scale; HTML cache disabled.
+
+### Under the hood
+
+- **Proxy v0.34.0** — daemon hardening plus alive-but-broken detection so a wedged proxy no longer silently drops RPCs; Mermaid `displayMode` / `orientation` flow through `tabs.update`; dot-separated RPC namespace.
+- Registry prunes stale tabs centrally on `paneFile` changes.
+- Tree-sitter editor stack removed (STTextView + TreeSitterMermaid deps dropped).
+- Hundreds of new unit tests across Registry, CommandBar, proxy integration, Add Server, and Add Project flows.
+- macOS deploys now symlink `/Applications/Pane Dev.app` into DerivedData to keep Gatekeeper's cache warm across rebuilds.
+]]></description>
+      <enclosure
+        url="https://github.com/bryantebeek/pane-releases/releases/download/v0.5.0/Pane-0.5.0.zip"
+        length="31743260"
+        type="application/octet-stream"
+        sparkle:edSignature="C1RP/4KxYlbK8HkpCpwCwxLu14bLYUgQSJtkSO9lBCcs4Huo83N+xWoJOv1t1VXWUh9eT4Yaixlqrf+uSEvZBQ==" />
+    </item>
+    <item>
       <title>Pane 0.4.0</title>
       <pubDate>Wed, 15 Apr 2026 16:12:11 +0200</pubDate>
       <sparkle:version>1776262098</sparkle:version>

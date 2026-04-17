@@ -35,6 +35,51 @@
       <h1>Changelog</h1>
       <p class="subtitle">Release notes for every version of Pane.</p>
 
+      <h2>0.5.0 <span class="changelog-date">— April 17, 2026</span></h2>
+
+      <h3>New</h3>
+      <ul>
+        <li><strong>Monaco editor everywhere</strong> &mdash; the file viewer, git diffs, and Mermaid previews now run on Monaco (VS Code's editor). More accurate syntax highlighting, better performance on big files, unified behavior across platforms. Diffs default to inline with a toggle for side-by-side, and git diffs get a side-by-side image preview</li>
+        <li><strong>Unified command bar</strong> &mdash; file palette and command palette merged into a single CommandBar with one UI and one set of keybindings</li>
+        <li><strong>Tab snooze</strong> &mdash; snooze any tab to sink it below every other kind in the sidebar; attention-requiring tabs stay bright even in inactive workspaces</li>
+        <li><strong>Drag-to-reorder, everywhere</strong> &mdash; servers, projects, workspaces, and tabs can all be dragged into your preferred order. Pinned files in the macOS Files panel too</li>
+        <li><strong>iOS on the App Store</strong> &mdash; Pane now ships to TestFlight with an official iOS release workflow</li>
+        <li><strong>iPadOS support</strong> &mdash; iPad Pro 11" M5 is a first-class target. The software keyboard pushes chrome up correctly, and portrait mode uses touch-friendly tree icons</li>
+        <li><strong>Tile all tabs</strong> &mdash; a new sidebar view renders every tab at once inside the workspace</li>
+        <li><strong>Cycle waiting agents</strong> &mdash; ⌘[ / ⌘] jumps between agents awaiting input in the current workspace. Waiting-agent shortcuts are grouped under "Agents" in the cheatsheet</li>
+        <li><strong>iOS home screen quick actions</strong> &mdash; long-press the app icon to jump straight into common flows</li>
+        <li><strong>Right-click → split</strong> &mdash; right-click a new-tab button to open that kind in a split</li>
+      </ul>
+
+      <h3>Improvements</h3>
+      <ul>
+        <li><strong>Voice input on iOS is reliable</strong> &mdash; stray Enters suppressed, SSH writes serialized, keystrokes routed through <code>tmux send-keys</code> with bracketed paste + delayed CR</li>
+        <li><strong>Context menus unified</strong> &mdash; one <code>paneContextMenu</code> across macOS and iOS, with UIKit long-press, full-width dividers, and a git-diff discard action</li>
+        <li><strong>Sidebar polish</strong> &mdash; non-active rows dim via opacity instead of greying out. Projects only auto-expand when they have tabs. Snoozed tabs sink below every non-snoozed kind</li>
+        <li><strong>Files panel</strong> &mdash; pinned files can be dragged to reorder on macOS; row heights and icon sizes tightened to match the git row</li>
+        <li><strong>CLI</strong> &mdash; <code>pane file pin</code> / <code>unpin</code> / <code>pins</code> for managing pinned files. Session-start help is richer</li>
+      </ul>
+
+      <h3>Fixes</h3>
+      <ul>
+        <li>iPad: keyboard safe area respected so the software keyboard no longer covers chrome</li>
+        <li>Add Server / Add Project: spinner only on the clicked server row</li>
+        <li>iOS shortcut open handler: uses the <code>projectId</code> from <code>PendingOpen</code> instead of resolving the wrong project</li>
+        <li>File tabs: dedupe by deterministic SHA256(path) so the same file can't spawn duplicates</li>
+        <li>Monaco on iOS: viewport meta set so pages don't auto-scale; HTML cache disabled</li>
+      </ul>
+
+      <h3>Under the hood</h3>
+      <ul>
+        <li><strong>Proxy v0.34.0</strong> &mdash; daemon hardening plus alive-but-broken detection so a wedged proxy no longer silently drops RPCs; Mermaid <code>displayMode</code> / <code>orientation</code> flow through <code>tabs.update</code>; dot-separated RPC namespace</li>
+        <li>Registry prunes stale tabs centrally on <code>paneFile</code> changes</li>
+        <li>Tree-sitter editor stack removed (STTextView + TreeSitterMermaid deps dropped)</li>
+        <li>Hundreds of new unit tests across Registry, CommandBar, proxy integration, Add Server, and Add Project flows</li>
+        <li>macOS deploys now symlink <code>/Applications/Pane Dev.app</code> into DerivedData to keep Gatekeeper's cache warm across rebuilds</li>
+      </ul>
+
+      <p><a href="https://github.com/bryantebeek/pane-releases/releases/tag/v0.5.0">Release on GitHub →</a></p>
+
       <h2>0.4.0 <span class="changelog-date">— April 15, 2026</span></h2>
 
       <h3>New</h3>
