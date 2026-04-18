@@ -79,5 +79,5 @@ Pane deploys a small Rust daemon (`pane-proxy`) to each server on first connect.
 
 ## Links
 
-- **Landing page**: https://bryantebeek.github.io/pane-releases/
-- **Appcast (Sparkle)**: https://bryantebeek.github.io/pane-releases/appcast.xml
+- **Landing page**: https://pane.works/
+- **Appcast (Sparkle)**: https://pane.works/appcast.xml

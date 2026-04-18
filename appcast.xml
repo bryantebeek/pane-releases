@@ -4,7 +4,7 @@
      version="2.0">
   <channel>
     <title>Pane</title>
-    <link>https://bryantebeek.github.io/pane-releases/appcast.xml</link>
+    <link>https://pane.works/appcast.xml</link>
     <description>Pane macOS update feed</description>
     <language>en</language>
     <!-- New <item> entries get pasted here, newest first. -->
